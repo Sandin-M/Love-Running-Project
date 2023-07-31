@@ -1,6 +1,6 @@
-
 /*Google Fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
 /*Asterisk wildcard selector to override default styles added by the browser*/
 * {
     padding: 0;
@@ -9,8 +9,8 @@
 }
 
 /*General style*/
-body{
-    min-height:100vh;
+body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     /*Generic project styles*/
@@ -27,8 +27,8 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
-    display:flex;
-    justify-content:space-between;
+    display: flex;
+    justify-content: space-between;
     align-items: baseline;
 }
 
@@ -37,10 +37,11 @@ header a {
     color: inherit;
 }
 
-h1 {font-family: 'Oswald', sans-serif;
-   text-transform: uppercase;
-   letter-spacing: 2px;
-   color: #252525;
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
 #menu {
@@ -49,7 +50,7 @@ h1 {font-family: 'Oswald', sans-serif;
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -60,11 +61,12 @@ h1 {font-family: 'Oswald', sans-serif;
 
 /*Navbar styles with dropdown toggle*/
 
-nav {position:absolute;
-    background-color:#ffffff;
-    width:100%;
-    left:0;
-    padding:0 1rem;
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
@@ -73,15 +75,15 @@ nav {position:absolute;
 /*Nav Toggle*/
 
 #nav-toggle:checked~nav {
-    display:block;
+    display: block;
 }
 
 #nav-toggle {
-    display:none;
+    display: none;
 }
 
 .nav-toggle-label {
-    font-size:2rem;
+    font-size: 2rem;
 }
 
 /*Main content*/
@@ -89,10 +91,32 @@ main {
     background-color: lightblue;
     /*Make main element take up any surplus space to push footer down*/
     flex: 1 0 auto;
-    margin-top:47px;
+    margin-top: 47px;
+
+
 }
 
 /*Footer*/
 footer {
     background-color: orange;
+}
+
+/*Media query for tablet and larger (768px and larger)*/
+@media screen and (min-width: 768px) { 
+    nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
+}
+#menu {display:flex;
+}
+
+#menu > li {padding-left: 1rem;
+}
+
+.nav-toggle-label {display: none;
+}
+
 }
